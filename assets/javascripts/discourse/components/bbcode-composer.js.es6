@@ -34,7 +34,7 @@ export default function(bbCodeList, autocompleteTag){
   Editor.reopen({
     _applyBBCodesAutocomplete: function () {
       const container = this.get('container'),
-        $editorInput = this.$('.d-editor-input');
+        $editorInput = $('.d-editor-input', this.element);
 
       const template = findRawTemplate('javascripts/discourse-awesome-bbcodes/templates/bbcode-autocomplete');
       autocompleteTag.call($editorInput, {
